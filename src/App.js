@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import { useCallback, useEffect, useState } from 'react';
+import axios from 'axios';
+import Button from '@mui/material/Button';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const [image, setImage] = useState();
+
+  const fetchCatData = useCallback(async () => {
+    try {
+      const response = await axios.get("https://api.thecatapi.com/v1/images/search")
+      setImage(response.data[0])
+    }
+    catch (error) {
+      alert(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchCatData()
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Button
+        variant="contained"
+        onClick={fetchCatData}
+        sx={{ margin: 2 }}
+      >
+        Click to get another cat
+      </Button>
+      <img className="image" src={image?.url} alt="cat" />
     </div>
-  );
-}
+  )
+};
 
 export default App;
