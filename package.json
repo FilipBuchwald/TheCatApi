@@ -2,7 +2,7 @@
   "name": "lifecycle-methods",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://filipbuchwald.github.io/thecatapi/",
+  "homepage": "https://filipbuchwald.github.io/TheCatApi/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
