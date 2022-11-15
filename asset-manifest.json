@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thecatapi/static/css/main.b0bc510d.css",
+    "main.js": "/thecatapi/static/js/main.03ba0f82.js",
+    "index.html": "/thecatapi/index.html",
+    "main.b0bc510d.css.map": "/thecatapi/static/css/main.b0bc510d.css.map",
+    "main.03ba0f82.js.map": "/thecatapi/static/js/main.03ba0f82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0bc510d.css",
+    "static/js/main.03ba0f82.js"
+  ]
+}
